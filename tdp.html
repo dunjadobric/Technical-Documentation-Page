@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta lang="en">
+		<meta name="Author" content="Dunja Dobric">
+		<meta name="description" content="FCC Challenge - Technical Documentation Page about CSS">
+		<meta name="keywords" content="fcc, technical documentation, css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+		<title>CSS Tehnical Documentation Page</title>
+	</head>
+	<body>
+		<nav id="navbar">
+			<header>CSS Technical Documentation</header>
+			<ul>
+				<li><a class="nav-link" href="#introduction">Introduction</a></li>
+				<li><a class="nav-link" href="#the_syntax_and_forms_of_the_language">The syntax and forms of the language</a></li>
+				<li><a class="nav-link" href="#specificity">Specificity</a></li>
+				<li><a class="nav-link" href="#css_units_and_values">CSS units and values</a></li>
+				<li><a class="nav-link" href="#box_model_and_margin_collapse">Box model and margin collapse</a></li>
+				<li><a class="nav-link" href="#the_containing_block">The containing block</a></li>
+				<li><a class="nav-link" href="#stacking_contexts">Stacking contexts</a></li>
+				<li><a class="nav-link" href="#initial_values">Initial values</a></li>
+				<li><a class="nav-link" href="#css_shorthand_properties">CSS shorthand properties</a></li>
+				<li><a class="nav-link" href="#css_flexible_box_layout">CSS Flexible Box Layout</a></li>
+				<li><a class="nav-link" href="#css_grid_layout">CSS Grid Layout</a></li>
+				<li><a class="nav-link" href="#media_queries">Media queries</a></li>
+				<li><a class="nav-link" href="#animation">Animation</a></li>
+				<li><a class="nav-link" href="#reference">Reference</a></li>
+			</ul>
+		</nav>
+		<main id="main-doc">
+			<section class="main-section" id="introduction">
+				<header>Introduction</header>
+				<article>
+					<p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+					<p>CSS is one of the core languages of the open Web and is standardized across Web browsers according to the W3C specification. Previously development of various parts of CSS specification was done synchroniously, which allowed versioning of the latest recommendation. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.</p>
+					<p>From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to develop and release recommendations seperately per module. Instead of versioning the CSS specification, W3C now periodically takes a snapshot of the latest stable state of CSS specification. </p>
+				</article>
+			</section>
+
+			<section class="main-section" id="the_syntax_and_forms_of_the_language">
+				<header>The syntax and forms of the language</header>
+				<article>
+					<p>The basic goal of the Cascading Stylesheet (CSS) language is to allow a browser engine to paint elements of the page with specific features, like colors, positioning, or decorations. The CSS syntax reflects this goal and its basic building blocks are:</p>
+
+					<ul>
+						<li>The property which is an identifier, that is a human-readable name, that defines which feature is considered.</li>
+						<li>The value which describe how the feature must be handled by the engine. Each property has a set of valid values, defined by a formal grammar, as well as a semantic meaning, implemented by the browser engine.</li>
+					</ul>
+					<p>Setting CSS properties to specific values is the core function of the CSS language. A property and value pair is called a declaration, and any CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out, and to style it.</p>
+					<p>Both properties and values are case-insensitive by default in CSS. The pair is separated by a colon and white spaces before, between, and after properties and values, but not necessarily inside, are ignored</p>
+					<p>Example of code with written properties and its values:</p>
+					<code>margin: 0 auto;
+padding: 15px;
+background-color: #ffffff;</code>
+				</article>
+			</section>
+
+			<section class="main-section" id="specificity">
+				<header>Specificity</header>
+				<article>
+					<p><strong>Specificity</strong> is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of CSS selectors.</p>
+					<p>When an important rule is used on a style declaration, this declaration overrides any other declarations. Although technically !important has nothing to do with specificity, it interacts directly with it. Using !important, however, is bad practice and should be avoided because it makes debugging more difficult by breaking the natural cascading in your stylesheets. When two conflicting declarations with the !important rule are applied to the same element, the declaration with a greater specificity will be applied.</p>
+					<p>In CSS, <strong>inheritance</strong> controls what happens when no value is specified for a property on an element.</p>
+					<p>CSS properties can be categorized in two types:</p>
+					<ul>
+						<li>inherited properties, which by default are set to the computed value of the parent element</li>
+						<li>non-inherited properties, which by default are set to initial value of the property</li>
+					</ul>
+					<p>The inherit keyword allows authors to explicitly specify inheritance. It works on both inherited and non-inherited properties.</p>
+					<p>The cascade is an algorithm that defines how to combine property values originating from different sources. It lies at the core of CSS, as emphasized by the name: Cascading Style Sheets. This article explains what the cascade is, the order in which CSS declarations cascade, and how this affects you, the web developer.</p>
+					<p>The <strong>cascade</strong> is an algorithm that defines how to combine property values originating from different sources. It lies at the core of CSS, as emphasized by the name: Cascading Style Sheets. This article explains what the cascade is, the order in which CSS declarations cascade, and how this affects you, the web developer.</p>
+				</article>
+			</section>
+
+			<section class="main-section" id="css_units_and_values">
+				<header>CSS units and values</header>
+				<article>
+					<p>Every CSS declaration includes a property/value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types, values and units, that CSS properties accept.</p>
+				</article>
+			</section>
+
+			<section class="main-section" id="box_model_and_margin_collapse">
+				<header>Box model and margin collapse</header>
+				<article>
+					<p>When laying out a document, the browser's rendering engine represents each element as a rectangular box according to the standard <strong>CSS basic box model</strong>. CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes. Every box is composed of four parts (or areas), defined by their respective edges: the content edge, padding edge, border edge, and margin edge.</p>
+					<p>The top and bottom margins of blocks are sometimes combined <strong>(collapsed)</strong> into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing. Note that the margins of floating and absolutely positioned elements never collapse.</p>
+					<p>Margin collapsing occurs in three basic cases:</p>
+					<ul>
+						<li>Adjacent siblings</li>
+						<li>No content separating parent and descendants</li>
+						<li>Empty blocks</li>
+					</ul>
+					<p>Example (HTML):</p>
+					<code>&lt;p&gt;The bottom margin of this paragraph is collapsed …&lt;&#47;p&gt;
+&lt;p&gt;… with the top margin of this paragraph, yielding a margin of 1.2rem in between.&lt;&#47;p&gt;
+
+&lt;div&gt;This parent element contains two paragraphs!
+	&lt;p>This paragraph has a 4rem margin between it and the text above.&lt;&#47;p&gt;
+	&lt;p&gt;My bottom margin collapses with my parent, yielding a bottom margin of 2rem.&lt;&#47;p&gt;
+&lt;&#47;div&gt;
+
+&lt;p&gt;I am 2rem below the element above.&lt;&#47;p&gt;</code>
+					<p>Example (CSS):</p>
+<code>div {
+     margin: 2rem 0;
+     background: lavender;
+}
+p {
+   margin: .4rem 0 1.2rem 0;
+   background: yellow;
+}</code>
+				</article>
+			</section>
+
+			<section class="main-section" id="the_containing_block">
+				<header>The containing block</header>
+				<article>
+					<p>The size and position of an element are often impacted by its containing block. When a user agent (such as your browser) lays out a document, it generates a box for every element.</p> 
+					<p>Each box is divided into four areas:</p>
+					<ol>
+						<li>Content area</li>
+						<li>Padding area</li>
+						<li>Border area</li>
+						<li>Margin area</li>
+					</ol>
+				</article>
+			</section>
+
+			<section class="main-section" id="stacking_contexts">
+				<header>Stacking contexts</header>
+				<article>
+					<p>The <strong>stacking context</strong> is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage. HTML elements occupy this space in priority order based on element attributes.</p>
+					<p>A <strong>block formatting context</strong> is a part of a visual CSS rendering of a web page. It's the region in which the layout of block boxes occurs and in which floats interact with other elements.</p>
+					<p>A block formatting context contains everything inside of the element creating it.</p>
+					<p>Block formatting contexts are important for the positioning and clearing of floats. The rules for positioning and clearing of floats apply only to things within the same block formatting context. Floats don't affect the layout of the content inside other block formatting contexts, and clear only clears past floats in the same block formatting context. Margin collapsing also occurs only between blocks that belong to the same block formatting context.</p>	
+				</article>
+			</section>
+
+			<section class="main-section" id="initial_values">
+				<header>Initial values</header>
+				<article>
+					<p><strong>The initial value</strong> of a CSS property is its default value, as listed in its definition table. The usage of the initial value depends on whether a property is inherited or not:</p>
+					<ul>
+						<li>For inherited properties, the initial value is used on the root element only, as long as no specified value is supplied.</li>
+						<li>For non-inherited properties, the initial value is used on all elements, as long as no specified value is supplied.</li>
+					</ul>
+					<p><strong>The computed value</strong> of a CSS property is the value that is transferred from parent to child during inheritance.</p> 
+					<p>It is calculated from the specified value by:</p>
+					<ol>
+						<li>Handling the special values inherit, initial, unset, and revert.</li>
+						<li>Doing the computation needed to reach the value described in the "Computed value" line in the property's definition table.</li>
+					</ol>
+					<p>The computation needed to reach a property's computed value typically involves converting relative values (such as those in em units or percentages) to absolute values. For example, if an element has specified values <code class="code-inline">font-size: 16px</code> and <code class="code-inline">padding-top: 2em</code>, then the computed value is <code class="code-inline">padding-top: 32px</code> (double the font size).</p>
+					<p><strong>The used value</strong> of a CSS property is its value after all calculations have been performed on the computed value. After the user agent has finished its calculations, every CSS property has a used value. The used values of dimensions are in pixels. The used values of shorthand properties (e.g., background) are consistent with those of their component properties (e.g., background-color or background-size) and with position and float.</p>
+					<p><strong>The actual value</strong> of a CSS property is the used value of that property after any necessary approximations have been applied. For example, a user agent that can only render borders with a whole-number pixel width may round the thickness of the border to the nearest integer.</p>
+				</article>
+			</section>
+
+			<section class="main-section" id="css_shorthand_properties">
+				<header>CSS shorthand properties</header>
+				<article>
+					<p>Shorthand properties are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.</p>
+					<p>The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For instance, the CSS background property is a shorthand property that's able to define the values of background-color, background-image, background-repeat, and background-position. Similarly, the most common font-related properties can be defined using the shorthand font, and the different margins around a box can be defined using the margin shorthand.</p>
+				</article>
+			</section>
+
+			<section class="main-section" id="css_flexible_box_layout">
+				<header>CSS Flexible Box Layout</header>
+				<article>
+					<p>CSS Flexible Box Layout is a module of CSS that defines a CSS box model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated.</p>
+<code>.box {
+      display: flex;
+      justify-content: space-between;
+}</code>
+				</article>
+			</section>
+
+			<section class="main-section" id="css_grid_layout">
+				<header>CSS Grid Layout</header>
+				<article>
+					<p>CSS Grid Layout excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.</p>
+					<p>Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.</p>
+<code>#container {
+            display: grid;
+            grid: repeat(2, 60px) / auto-flow 80px;
+}
+
+#container > div {
+                  background-color: #8ca0ff;
+                  width: 50px;
+                  height: 50px;
+}</code>
+				</article>
+			</section>
+
+			<section class="main-section" id="media_queries">
+				<header>Media queries</header>
+				<article>
+					<p>Media queries let you adapt your site or app depending on the presence or value of various device characteristics and parameters.</p>
+					<p>They are a key component of responsive design. For example, a media query can shrink the font size on small devices, increase the padding between paragraphs when a page is viewed in portrait mode, or bump up the size of buttons on touchscreens.</p>
+					<p>In CSS, use the <code class="code-inline">@media at-rule</code> to conditionally apply part of a style sheet based on the result of a media query. Use <code class="code-inline">@import</code> to conditionally apply an entire style sheet.</p>
+				</article>
+			</section>
+
+			<section class="main-section" id="animation">
+				<header>Animation</header>
+				<article>
+					<p>The animation shorthand CSS property applies an animation between styles. It is a shorthand for animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and animation-play-state.</p>
+				</article>
+			</section>
+
+			<section class="main-section" id="reference">
+				<header>Reference</header>
+				<article>
+					<ul>
+						<li>All documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs/CSS</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/MDN/About" target="_blank">About MDN</a> by <a href="https://developer.mozilla.org/en-US/docs/MDN/About/contributors.txt" target="_blank">Mozilla Contributors</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank"> CC-BY-SA 2.5.</a></li>
+					</ul>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>	
+
+
